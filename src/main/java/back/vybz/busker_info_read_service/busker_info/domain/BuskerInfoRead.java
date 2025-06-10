@@ -50,6 +50,12 @@ public class BuskerInfoRead {
     private Integer followerCount;
 
     /**
+     * 버스커 팔로워 수 (표시용)
+     */
+    @Field(name = "display_follower_count")
+    private String displayFollowerCount;
+
+    /**
      * 버스커 구독자 수
      */
     @Field(name = "subscribed_count")
@@ -68,9 +74,15 @@ public class BuskerInfoRead {
         this.introduction = introduction;
     }
 
+    public void updateFollowerCount(Integer followerCount, String displayFollowerCount) {
+        this.followerCount = followerCount;
+        this.displayFollowerCount = displayFollowerCount;
+    }
+
     @Builder
-    public BuskerInfoRead(String id, String buskerUuid, String nickname, String profileImageUrl, String introduction,
-                          Integer followerCount, Integer subscribedCount, Instant createdAt, Instant updatedAt) {
+    public BuskerInfoRead(String id, String buskerUuid, String nickname, String profileImageUrl,
+                          String introduction, Integer followerCount, Integer subscribedCount,
+                          Instant createdAt, Instant updatedAt) {
         this.id = id;
         this.buskerUuid = buskerUuid;
         this.nickname = nickname;
