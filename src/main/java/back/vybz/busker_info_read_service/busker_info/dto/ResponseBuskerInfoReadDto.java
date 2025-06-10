@@ -15,16 +15,19 @@ public class ResponseBuskerInfoReadDto {
     private String profileImageUrl;
     private String introduction;
     private Integer followerCount;
+    private String displayFollowerCount;
     private Integer subscribedCount;
 
     @Builder
     public ResponseBuskerInfoReadDto(String buskerUuid, String nickname, String profileImageUrl,
-                                      String introduction, Integer followerCount, Integer subscribedCount) {
+                                      String introduction, Integer followerCount, String displayFollowerCount,
+                                      Integer subscribedCount) {
         this.buskerUuid = buskerUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
         this.introduction = introduction;
         this.followerCount = followerCount;
+        this.displayFollowerCount = displayFollowerCount;
         this.subscribedCount = subscribedCount;
     }
 
@@ -35,6 +38,7 @@ public class ResponseBuskerInfoReadDto {
                 .profileImageUrl(buskerInfoRead.getProfileImageUrl())
                 .introduction(buskerInfoRead.getIntroduction())
                 .followerCount(buskerInfoRead.getFollowerCount())
+                .displayFollowerCount(buskerInfoRead.getDisplayFollowerCount())
                 .subscribedCount(buskerInfoRead.getSubscribedCount())
                 .build();
     }
@@ -46,6 +50,7 @@ public class ResponseBuskerInfoReadDto {
                 .profileImageUrl(profileImageUrl)
                 .introduction(introduction)
                 .followerCount(followerCount)
+                .displayFollowerCount(displayFollowerCount)
                 .subscribedCount(subscribedCount)
                 .build();
     }
