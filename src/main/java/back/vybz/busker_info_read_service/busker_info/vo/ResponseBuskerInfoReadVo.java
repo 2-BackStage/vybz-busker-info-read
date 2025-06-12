@@ -6,7 +6,6 @@ import lombok.Getter;
 @Getter
 public class ResponseBuskerInfoReadVo {
 
-    private String buskerUuid;
     private String nickname;
     private String profileImageUrl;
     private String introduction;
@@ -15,10 +14,9 @@ public class ResponseBuskerInfoReadVo {
     private Integer subscribedCount;
 
     @Builder
-    public ResponseBuskerInfoReadVo(String buskerUuid, String nickname, String profileImageUrl,
+    public ResponseBuskerInfoReadVo(String nickname, String profileImageUrl,
                                      String introduction, Integer followerCount, String displayFollowerCount,
                                      Integer subscribedCount) {
-        this.buskerUuid = buskerUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
         this.introduction = introduction;

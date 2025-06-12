@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ResponseBuskerInfoReadDto {
 
-    private String buskerUuid;
     private String nickname;
     private String profileImageUrl;
     private String introduction;
@@ -19,10 +18,9 @@ public class ResponseBuskerInfoReadDto {
     private Integer subscribedCount;
 
     @Builder
-    public ResponseBuskerInfoReadDto(String buskerUuid, String nickname, String profileImageUrl,
+    public ResponseBuskerInfoReadDto(String nickname, String profileImageUrl,
                                       String introduction, Integer followerCount, String displayFollowerCount,
                                       Integer subscribedCount) {
-        this.buskerUuid = buskerUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
         this.introduction = introduction;
@@ -33,7 +31,6 @@ public class ResponseBuskerInfoReadDto {
 
     public static ResponseBuskerInfoReadDto from(BuskerInfoRead buskerInfoRead) {
         return ResponseBuskerInfoReadDto.builder()
-                .buskerUuid(buskerInfoRead.getBuskerUuid())
                 .nickname(buskerInfoRead.getNickname())
                 .profileImageUrl(buskerInfoRead.getProfileImageUrl())
                 .introduction(buskerInfoRead.getIntroduction())
@@ -45,7 +42,6 @@ public class ResponseBuskerInfoReadDto {
 
     public ResponseBuskerInfoReadVo toVo() {
         return ResponseBuskerInfoReadVo.builder()
-                .buskerUuid(buskerUuid)
                 .nickname(nickname)
                 .profileImageUrl(profileImageUrl)
                 .introduction(introduction)
