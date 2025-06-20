@@ -17,7 +17,7 @@ public class UpdateBuskerInfoEventConsumer {
 
     @KafkaListener(
             topics = "update-busker-info",
-            groupId = "busker-info-read-group",
+            groupId = "update-busker-info-read-group",
             containerFactory = "buskerInfoKafkaListenerContainerFactory"
     )
     public void consumeUpdateBuskerInfoEvent(BuskerInfoEvent buskerInfoEvent) {

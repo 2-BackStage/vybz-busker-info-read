@@ -19,7 +19,7 @@ public class BuskerFollowerCountEventConsumer {
 
     @KafkaListener(
             topics = "busker-follower-count",
-            groupId = "busker-info-read-group",
+            groupId = "busker-follower-group",
             containerFactory = "buskerFollowerCountKafkaListenerContainerFactory"
     )
     public void consumeBuskerFollowerCountEvent(BuskerFollowerCountEvent event) {

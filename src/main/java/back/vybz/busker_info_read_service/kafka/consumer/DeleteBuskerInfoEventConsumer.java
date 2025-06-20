@@ -15,7 +15,7 @@ public class DeleteBuskerInfoEventConsumer {
 
     @KafkaListener(
             topics = "delete-busker-info",
-            groupId = "busker-info-read-group",
+            groupId = "delete-busker-info-read-group",
             containerFactory = "stringBuskerInfoKafkaListenerContainerFactory"
     )
     public void consumeDeleteBuskerInfoEvent(String buskerUuid) {
