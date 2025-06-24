@@ -29,14 +29,14 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .addSecurityItem(securityRequirement)
                 .components(components)
-                .addServersItem(new Server().url("/user-info-read-service"))
+                .addServersItem(new Server().url("/busker-info-read-service"))
                 .info(apiInfo());
     }
 
     private Info apiInfo() {
         return new Info()
-                .title("VYBZ USER-INFO-READ SERVICE 문서")
-                .description("USER-INFO-READ SERVICE API 테스트를 위한 Swagger UI")
+                .title("VYBZ busker-INFO-READ SERVICE 문서")
+                .description("busker-INFO-READ SERVICE API 테스트를 위한 Swagger UI")
                 .version("1.0.0");
     }
 
