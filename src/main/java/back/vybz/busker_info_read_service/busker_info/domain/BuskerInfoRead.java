@@ -81,7 +81,7 @@ public class BuskerInfoRead {
 
     @Builder
     public BuskerInfoRead(String id, String buskerUuid, String nickname, String profileImageUrl,
-                          String introduction, Integer followerCount, Integer subscribedCount,
+                          String introduction, Integer followerCount, String displayFollowerCount, Integer subscribedCount,
                           Instant createdAt, Instant updatedAt) {
         this.id = id;
         this.buskerUuid = buskerUuid;
@@ -89,6 +89,7 @@ public class BuskerInfoRead {
         this.profileImageUrl = profileImageUrl;
         this.introduction = introduction;
         this.followerCount = followerCount;
+        this.displayFollowerCount = displayFollowerCount;
         this.subscribedCount = subscribedCount;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;

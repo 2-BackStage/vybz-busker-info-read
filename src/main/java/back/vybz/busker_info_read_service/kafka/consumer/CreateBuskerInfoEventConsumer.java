@@ -37,6 +37,7 @@ public class CreateBuskerInfoEventConsumer {
                 .introduction(buskerInfoEvent.getIntroduction())
                 .profileImageUrl(buskerInfoEvent.getProfileImageUrl())
                 .followerCount(buskerInfoEvent.getFollowerCount() == null ? 0 : buskerInfoEvent.getFollowerCount())
+                .displayFollowerCount(buskerInfoEvent.getDisplayFollowerCount() == null ? "0" : buskerInfoEvent.getDisplayFollowerCount())
                 .subscribedCount(buskerInfoEvent.getSubscribedCount() == null ? 0 : buskerInfoEvent.getSubscribedCount())
                 .build();
 

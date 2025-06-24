@@ -14,6 +14,7 @@ public class BuskerInfoEvent {
     private String profileImageUrl;
     private String introduction;
     private Integer followerCount;
+    private String displayFollowerCount;
     private Integer subscribedCount;
 
 }
